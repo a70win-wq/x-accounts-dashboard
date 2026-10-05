@@ -1,0 +1,2151 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>19 個中文區 AI 工具博主 X 帳號對比看板</title>
+  <style>
+    /* CSS Reset & Variable Tokens */
+    :root {
+      --bg-primary: #0b0f19;
+      --bg-secondary: #111827;
+      --bg-card: #1f2937;
+      --bg-card-hover: #283548;
+      --bg-input: #111827;
+      --border-color: #374151;
+      --border-subtle: #232d3f;
+      --text-main: #f9fafb;
+      --text-muted: #9ca3af;
+      --text-dim: #6b7280;
+      --accent-blue: #38bdf8;
+      --accent-indigo: #6366f1;
+      --accent-purple: #a855f7;
+      --accent-green: #10b981;
+      --accent-amber: #f59e0b;
+      --accent-rose: #f43f5e;
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+      --shadow-md: 0 4px 12px 0 rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-stack);
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      padding: 0;
+      margin: 0;
+    }
+
+    a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+    a:hover {
+      color: #7dd3fc;
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px 16px 64px 16px;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        padding: 40px 32px 80px 32px;
+      }
+    }
+
+    /* Header & Conclusion Callout */
+    .header {
+      margin-bottom: 28px;
+    }
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--accent-blue);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      margin-bottom: 12px;
+    }
+    .title {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      line-height: 1.25;
+    }
+    @media (min-width: 768px) {
+      .title {
+        font-size: 36px;
+      }
+    }
+    .subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    @media (min-width: 768px) {
+      .subtitle {
+        font-size: 16px;
+      }
+    }
+
+    /* Conclusion Box */
+    .conclusion-box {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(17, 24, 39, 0.95) 100%);
+      border: 1px solid rgba(99, 102, 241, 0.35);
+      border-left: 5px solid var(--accent-indigo);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 28px;
+      position: relative;
+    }
+    .conclusion-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #818cf8;
+      margin-bottom: 8px;
+    }
+    .conclusion-content {
+      font-size: 14.5px;
+      line-height: 1.7;
+      color: #e2e8f0;
+      font-weight: 500;
+    }
+    .conclusion-content strong {
+      color: #38bdf8;
+      font-weight: 700;
+    }
+
+    /* Stat Cards Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    @media (min-width: 900px) {
+      .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+      }
+    }
+    .stat-card {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .stat-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-dim);
+    }
+    .stat-value {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text-main);
+      font-variant-numeric: tabular-nums;
+    }
+    .stat-desc {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* Chart Section */
+    .chart-section {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+    .chart-header {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    @media (min-width: 640px) {
+      .chart-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    .chart-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .chart-subtitle {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .chart-container {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .svg-chart {
+      display: block;
+      width: 100%;
+      min-width: 320px;
+      height: auto;
+    }
+
+    /* Filter & Controls Toolbar */
+    .toolbar {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .toolbar-top {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    @media (min-width: 768px) {
+      .toolbar-top {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+    .search-wrapper {
+      position: relative;
+      flex: 1;
+    }
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-dim);
+      pointer-events: none;
+      width: 16px;
+      height: 16px;
+    }
+    .search-input {
+      width: 100%;
+      padding: 10px 36px 10px 38px;
+      font-size: 14px;
+      background-color: var(--bg-input);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .search-input:focus {
+      border-color: var(--accent-blue);
+      box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+    }
+    .search-clear-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--text-dim);
+      cursor: pointer;
+      font-size: 16px;
+      padding: 4px;
+      display: none;
+    }
+    .search-clear-btn.active {
+      display: block;
+    }
+    .search-clear-btn:hover {
+      color: var(--text-main);
+    }
+
+    .filters-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    @media (min-width: 640px) {
+      .filters-row {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .filters-row {
+        grid-template-columns: repeat(3, 1fr) auto auto;
+        align-items: center;
+      }
+    }
+
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .filter-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .filter-select {
+      width: 100%;
+      padding: 9px 12px;
+      font-size: 13px;
+      background-color: var(--bg-input);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      outline: none;
+      cursor: pointer;
+      transition: border-color 0.15s;
+    }
+    .filter-select:focus {
+      border-color: var(--accent-blue);
+    }
+
+    .toolbar-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 4px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .count-indicator {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .count-indicator strong {
+      color: var(--accent-blue);
+      font-weight: 700;
+    }
+    .btn-reset {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      font-size: 12.5px;
+      font-weight: 600;
+      background-color: transparent;
+      color: var(--text-muted);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .btn-reset:hover {
+      color: var(--text-main);
+      background-color: rgba(255, 255, 255, 0.05);
+      border-color: var(--text-dim);
+    }
+
+    /* Table Container & Table Styling */
+    .table-wrapper {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      margin-bottom: 32px;
+    }
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13px;
+      min-width: 1080px;
+    }
+    thead {
+      background-color: #1a2233;
+      border-bottom: 2px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    th {
+      padding: 12px 14px;
+      font-weight: 700;
+      color: var(--text-muted);
+      user-select: none;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: color 0.15s, background-color 0.15s;
+    }
+    th:hover {
+      color: var(--text-main);
+      background-color: rgba(255, 255, 255, 0.03);
+    }
+    th.no-sort {
+      cursor: default;
+    }
+    th.no-sort:hover {
+      color: var(--text-muted);
+      background-color: transparent;
+    }
+    .th-content {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .sort-icon {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      color: var(--text-dim);
+      font-size: 11px;
+    }
+    th.sorted-asc .sort-icon,
+    th.sorted-desc .sort-icon {
+      color: var(--accent-blue);
+      font-weight: bold;
+    }
+
+    /* Table Row Styles */
+    tbody tr.data-row {
+      border-bottom: 1px solid var(--border-subtle);
+      transition: background-color 0.15s ease;
+      cursor: pointer;
+    }
+    tbody tr.data-row:hover {
+      background-color: var(--bg-card-hover);
+    }
+    tbody tr.data-row.expanded {
+      background-color: #1e293b;
+      border-bottom-color: transparent;
+    }
+    td {
+      padding: 13px 14px;
+      vertical-align: middle;
+      color: var(--text-main);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .cell-handle {
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .cell-handle a {
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .cell-handle a:hover {
+      color: var(--accent-blue);
+    }
+    .ext-icon {
+      width: 12px;
+      height: 12px;
+      opacity: 0.6;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 8px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 600;
+      white-space: nowrap;
+      line-height: 1.2;
+    }
+    .badge-complete {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .badge-partial {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+    .badge-style {
+      background: rgba(99, 102, 241, 0.15);
+      color: #a5b4fc;
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      max-width: 160px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .badge-tag {
+      background: rgba(255, 255, 255, 0.06);
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 10.5px;
+      padding: 2px 6px;
+      margin: 2px 2px 2px 0;
+      display: inline-block;
+      border-radius: 4px;
+    }
+    .badge-na {
+      color: var(--text-dim);
+      font-style: normal;
+      font-size: 12px;
+    }
+    .cell-window {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      max-width: 160px;
+      line-height: 1.35;
+    }
+    .cell-topic {
+      font-size: 12.5px;
+      color: #cbd5e1;
+      max-width: 260px;
+      line-height: 1.4;
+    }
+    .btn-expand-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+      border: 1px solid var(--border-color);
+      transition: transform 0.2s, background-color 0.15s;
+    }
+    tbody tr.data-row.expanded .btn-expand-icon {
+      transform: rotate(180deg);
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent-blue);
+      border-color: var(--accent-blue);
+    }
+
+    /* Row Details Accordion */
+    tr.details-row {
+      background-color: #162032;
+      border-bottom: 2px solid var(--border-color);
+    }
+    .details-container {
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .details-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .details-meta-left {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .meta-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .meta-tag strong {
+      color: #e2e8f0;
+    }
+    .btn-visit-x {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      background-color: #0284c7;
+      color: #ffffff !important;
+      border-radius: var(--radius-sm);
+      text-decoration: none !important;
+      transition: background-color 0.15s ease;
+    }
+    .btn-visit-x:hover {
+      background-color: #0369a1;
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    @media (min-width: 768px) {
+      .details-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1100px) {
+      .details-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .detail-card {
+      background-color: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .detail-card.span-full {
+      grid-column: 1 / -1;
+    }
+    .detail-card-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent-blue);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: 0.02em;
+    }
+    .detail-card-body {
+      font-size: 13px;
+      line-height: 1.6;
+      color: #e2e8f0;
+    }
+
+    /* Empty state */
+    .empty-state {
+      padding: 48px 24px;
+      text-align: center;
+      color: var(--text-muted);
+    }
+    .empty-state-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    /* Footer & Data Limitations */
+    .footer-limitations {
+      background: linear-gradient(180deg, #111827 0%, #0b0f19 100%);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    @media (min-width: 768px) {
+      .footer-limitations {
+        padding: 32px;
+      }
+    }
+    .limitations-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 12px;
+    }
+    .limitations-notice {
+      font-size: 13.5px;
+      color: #cbd5e1;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      padding: 12px 16px;
+      background: rgba(245, 158, 11, 0.08);
+      border-left: 4px solid var(--accent-amber);
+      border-radius: var(--radius-sm);
+    }
+    .limitations-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      list-style: none;
+    }
+    @media (min-width: 768px) {
+      .limitations-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+    }
+    .limitation-item {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .limitation-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .limitation-text {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .copyright {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-dim);
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-subtle);
+    }
+  
+    /* Grok Bot 修正（2026-10-05）：桌面版主題材欄被擠得太窄、打法分類標籤被截斷 */
+    th { padding: 10px 8px; }
+    td { padding: 10px 8px; }
+    .cell-topic { min-width: 230px; max-width: 300px; }
+    .cell-window { min-width: 110px; }
+    #main-table td:nth-child(3) { white-space: nowrap; }
+    .badge-style { white-space: normal; max-width: 130px; text-overflow: clip; line-height: 1.35; }
+  </style>
+</head>
+<body>
+
+  <!-- Inlined Authentic Raw Data -->
+  <script id="dashboard-raw-data" type="application/json">
+[
+  {
+    "handle": "@AIExplorerTim",
+    "followers": 43249,
+    "followers_text": "43,249",
+    "created": "2012-09-07",
+    "daily_original": 2.0,
+    "daily_original_text": "2.0",
+    "replies_7d": 107,
+    "peak_views": 374909,
+    "peak_views_text": "374,909",
+    "peak_views_window": "歷史累積（09-13 帖，非近 7 日原創）",
+    "topic": "提示詞清單／隱藏模式（無限導師、語言學習）、副業路徑、YouTube 變現",
+    "topic_tags": [
+      "提示詞",
+      "變現／副業"
+    ],
+    "play_style": "工廠化提示詞／固定模板串樓型",
+    "partial": true,
+    "report_file": "AIExplorerTim-20260921.md",
+    "report_date": "2026-09-21",
+    "details": {
+      "收窄打法": "近窗幾乎固定每日 2 條原創鉤子帖（隱藏模式／提示詞清單／副業路徑），再用大量自我回覆串樓補齊編號提示詞，並用固定 CTA 要關注＋轉發；近 7 日回覆 107 條中 106 條是自我串樓。",
+      "漲粉自述": "檔內無明確粉絲里程碑自述（破千／破萬慶祝帖看不到）；歷史粉曲線、認真起始日看不到（待 Grok Build）。2012 年開號的老號，Bio 自稱資深程序員、每天 Vibe Coding。",
+      "高書籤帖特徵": "「可直接複製照做」的提示詞包是書籤主力：09-13「語言學習模式」帖 2,762 書籤，09-17「無限個人導師」6 提示詞 2,354 書籤。",
+      "高觀看帖特徵": "主打「隱藏模式／提示詞清單」鉤子帖（如 7 提示詞、6 提示詞）：09-13 語言學習帖累積 374,909 觀看；近 7 日原創峰值為 09-17 無限個人導師帖 317,859 觀看。",
+      "可學重點": "① 建立標準化發帖模板與發布節奏；② 將提示詞資產結構化編號交付；③ 將導流與 CTA 收納於自我串樓，保持主文乾淨易擴散。"
+    },
+    "replies_7d_text": "107"
+  },
+  {
+    "handle": "@AI_DVD6",
+    "followers": 1116,
+    "followers_text": "1,116",
+    "created": "2026-09-09",
+    "daily_original": 2.4,
+    "daily_original_text": "約 2.4",
+    "replies_7d": 89,
+    "peak_views": 94872,
+    "peak_views_text": "94,872",
+    "peak_views_window": "近 7 日原創（09-15 帖，開號約 10 天）",
+    "topic": "AI 變現故事／反例（彩超人像）、Codex 實操教程 Article、開源清單",
+    "topic_tags": [
+      "Codex／Claude",
+      "開源／GitHub",
+      "變現／副業"
+    ],
+    "play_style": "低頻邪修／極客踩坑抄作業型",
+    "partial": true,
+    "report_file": "AI_DVD6-20260919.md",
+    "report_date": "2026-09-19",
+    "details": {
+      "收窄打法": "開號約 10 天的極新號，低頻原創（日均約 2.4 條）配合對外回覆（近 7 日 89 條）。專注「踩坑反例＋實操長文＋省錢開源」，不做泛泛工具搬運。",
+      "漲粉自述": "2026-09-09 開號，抓取日粉絲 1,116（約 10 日）；破千自述帖看不到。Bio：「我負責折騰 AI，你負責抄作業」，只分享自己實際跑過的方法。",
+      "高書籤帖特徵": "工具清單與省額度方案收藏價值高：09-16 GPT-6 Astra／Chat On Steroids 開源清單 901 書籤（約 63,567 視），09-15 Codex 入門 Article 450 書籤。",
+      "高觀看帖特徵": "衝擊感強的變現真實故事與避坑反例最易破圈，09-15「彩超人像淘寶變現」長帖配影片斬獲 94,872 觀看。",
+      "可學重點": "① 新號冷啟動首重「高信息差＋真實踩坑」；② 善用 Article 沉澱長線技術資產；③ 用爭議或真實反例短帖衝高瀏覽，帶動長文收藏。"
+    },
+    "replies_7d_text": "89"
+  },
+  {
+    "handle": "@AdrianPunk115",
+    "followers": 34113,
+    "followers_text": "34,113",
+    "created": "2026-04-24",
+    "daily_original": 24.8,
+    "daily_original_text": "約 24.8",
+    "replies_7d": 1001,
+    "peak_views": 2478312,
+    "peak_views_text": "~2,478,312",
+    "peak_views_window": "生涯峰值（07-31 置頂長文累積）",
+    "topic": "FDE 轉崗長文／方法論、AI 小白詞、Skills/Agent、自建工具（微排）、視覺金句圖帖",
+    "topic_tags": [
+      "Agent／Skills",
+      "提示詞",
+      "獨立開發／工具"
+    ],
+    "play_style": "高頻泡圈／回覆驅動型",
+    "partial": false,
+    "report_file": "AdrianPunk115-20260910.md",
+    "report_date": "2026-09-10",
+    "details": {
+      "收窄打法": "極端高頻互動（日均原創約 24.8 條，近 7 日回覆 1,001 條），回覆量約為原創 5 倍。以視覺金句圖帖、FDE 轉崗認知與自建工具微排為核心。",
+      "漲粉自述": "2026-04-24 開號；加速三跳：06-18 Punk-Skills 開源產品化 → 06-22 Loop Engineering（H1 第一爆）→ 07-31 FDE 長文（生涯峰值）。09-06 自報約 3.3 萬粉，當日約 3.4 萬；開號到 3 萬約 4.5 個月。",
+      "高書籤帖特徵": "可複製的方法論長文與自建工具：置頂 FDE 轉崗長文 4,494 書籤，06-22 Loop Engineering 約 4,702 書籤，08-15 Punk 微排 1,601 書籤。",
+      "高觀看帖特徵": "命運感、職場轉型焦慮與對比強烈的四詞視覺金句圖帖，07-31 FDE 轉崗長文生涯累積達 2,478,312 觀看，金句圖帖單篇獲 58 萬至 86 萬瀏覽。",
+      "可學重點": "① 用強烈視覺化配圖提高資訊停留時間；② 用超高頻回覆在同溫層建立強大在場感；③ 置頂權威認知長文作為流量承接池。"
+    },
+    "replies_7d_text": "1,001"
+  },
+  {
+    "handle": "@Fred834567",
+    "followers": 8496,
+    "followers_text": "8,496",
+    "created": "2026-06-21",
+    "daily_original": 2.88,
+    "daily_original_text": "約 2.88",
+    "replies_7d": 60,
+    "peak_views": 873000,
+    "peak_views_text": "873,000",
+    "peak_views_window": "樣本 Top 原創（08-26 帖累積）",
+    "topic": "信息差／搞錢／情緒（GitHub 套利、居留財富）＋ AI 工具實操（Codex Skills、視頻流水線）",
+    "topic_tags": [
+      "Codex／Claude",
+      "開源／GitHub",
+      "變現／副業",
+      "AI 視頻",
+      "Agent／Skills"
+    ],
+    "play_style": "高頻泡圈／回覆驅動型",
+    "partial": false,
+    "report_file": "Fred834567-20260917.md",
+    "report_date": "2026-09-17",
+    "details": {
+      "收窄打法": "日均原創約 2.88 條，回覆佔比約 63%（近 7 日 60 條）。打法兼具「搞錢／信息差／出海財富情緒」與「Codex Skills／AI 視頻實操」。",
+      "漲粉自述": "2026-06-21 開號；有公開里程碑：1k、2k、3k、5k 到 8k（08-27 五千粉復盤 → 09-11 八千粉）。07-22～24 Codex Skills＋GitHub 信息差首波爆，08-10～26 瀏覽天花板拉到約 87 萬。",
+      "高書籤帖特徵": "硬核工具整理與開源搞錢倉庫清單，08-16「GitHub 8 個高星搞錢倉庫」斬獲 4,408 書籤（曝光 22 萬，書籤率極高）。",
+      "高觀看帖特徵": "觸及廣泛群體焦慮與跨國生活想像的財富話題，08-26「西班牙 120 萬存款居留」清單斬獲 873,000 觀看。",
+      "可學重點": "① 清楚切分曝光帖（情緒／生活信息差）與書籤帖（開源工具代碼）；② 善用高星開源資產背書；③ 短影流水線與圖文交替發布。"
+    },
+    "replies_7d_text": "60"
+  },
+  {
+    "handle": "@GoSailGlobal",
+    "followers": 36194,
+    "followers_text": "36,194",
+    "created": "2025-05-31",
+    "daily_original": 13.86,
+    "daily_original_text": "13.86",
+    "replies_7d": 229,
+    "peak_views": 47383,
+    "peak_views_text": "47,383",
+    "peak_views_window": "近 7 日原創（09-23 帖）",
+    "topic": "Jev 決策模型布道＋開源／工具實操短影與長文（this-that、Creator Lab、插件）、MCN 案例",
+    "topic_tags": [
+      "開源／GitHub",
+      "Agent／Skills",
+      "AI 視頻",
+      "變現／副業"
+    ],
+    "play_style": "高頻泡圈／回覆驅動型",
+    "partial": true,
+    "report_file": "GoSailGlobal-20260927.md",
+    "report_date": "2026-09-27",
+    "details": {
+      "收窄打法": "日均原創 13.86 條、近 7 日回覆 229 條；近窗原創 97 條中純原創 44（45.4%）、引用 53（54.6%）。主打 Jev（決策模型）布道＋開源／工具實操短影與長文（this-that、Combos、Creator Lab、Chrome 插件），並用 GoSail Lab MCN／案例集變現。",
+      "漲粉自述": "未搜到本人明確漲粉數字自述；2026-08-28 帖自述約自 2025-07-27 認真經營（開號 2025-05-31）。當日粉 36,194。",
+      "高書籤帖特徵": "具備即刻動手屬性的流水線與開源插件配置，如 Creator Lab 工作流長文斬獲 369 書籤。",
+      "高觀看帖特徵": "「模型對標＋平替清單」短影帖，2026-09-23 Jev 對標 this-that-model-1.0 實測短影創下近窗峰值 47,383 觀看。",
+      "可學重點": "① 掌握技術熱點並迅速產出「This-That」對標清單；② 將文字教程產品化為短影錄屏演示；③ 結合商業變現路徑增強內容說服力。"
+    },
+    "replies_7d_text": "229"
+  },
+  {
+    "handle": "@Jolyne_AI",
+    "followers": 4868,
+    "followers_text": "4,868",
+    "created": "2026-05-19",
+    "daily_original": null,
+    "daily_original_text": "檔內無",
+    "replies_7d": null,
+    "replies_7d_text": "檔內無",
+    "peak_views": 175000,
+    "peak_views_text": "約 17.5 萬",
+    "peak_views_window": "生涯／歷史可見最高（09-02 帖累積）",
+    "topic": "開源挖寶／GitHub 開源項目、Agent/Skill 生態、開發者效率工具、出海／副業接單",
+    "topic_tags": [
+      "開源／GitHub",
+      "Agent／Skills",
+      "變現／副業",
+      "獨立開發／工具"
+    ],
+    "play_style": "高頻泡圈／回覆驅動型",
+    "partial": false,
+    "report_file": "Jolyne_AI-20260914.md",
+    "report_date": "2026-09-14",
+    "details": {
+      "收窄打法": "「發現／挖到」開源挖寶風格，每日短鉤＋痛點＋功能點＋截圖分享 GitHub/Agent 工具，近 7 日產出約 164 則（含回覆），回覆佔比約 48%。",
+      "漲粉自述": "2026-05-19 開號，06-24「新人報道，剛開藍V」；09-02 自承「大號也沒了」（前號 handle／原因看不到）。當日粉 4,868。",
+      "高書籤帖特徵": "解決剛需環境與提效的神器，06-26 open-source-cs 獲 1,038 書籤，09-02 網絡工具帖斬獲 2,950 書籤，Navop 運維工具獲 430 書籤。",
+      "高觀看帖特徵": "變現結果鉤或剛需網絡工具最易破圈：09-05 閑魚接單／變現鉤帖 124,963 觀看；09-02 fanqiang 帖約 17.5 萬觀看（本號可見最高）。",
+      "可學重點": "① 堅持「每天挖一個真好用 GitHub 項目」的清晰心智；② 用「一句痛點＋截圖證明」降低閱讀負擔；③ 活躍於評論區維繫高親和力圈層。"
+    }
+  },
+  {
+    "handle": "@Lonely__MH",
+    "followers": 26503,
+    "followers_text": "26,503",
+    "created": "2014-12-11",
+    "daily_original": 12.0,
+    "daily_original_text": "12.0",
+    "replies_7d": 468,
+    "peak_views": 1748203,
+    "peak_views_text": "1,748,203",
+    "peak_views_window": "近 7 日原創（09-21 帖累積）",
+    "topic": "AI 工具／模型熱點短帖（Codex 白嫖、Qwen NSFW、ZCode/Jev）、搞笑段子短影、引用熱點",
+    "topic_tags": [
+      "Codex／Claude",
+      "本地模型",
+      "AI 視頻"
+    ],
+    "play_style": "高頻泡圈／回覆驅動型",
+    "partial": true,
+    "report_file": "Lonely__MH-20260923.md",
+    "report_date": "2026-09-23",
+    "details": {
+      "收窄打法": "日均原創 12.0 條，對外回覆達 441 條（佔回覆 94.2%）。以模型熱點極速吃瓜、爭議話題、搞笑段子短影與熱門推文引用為主。",
+      "漲粉自述": "破千／破萬慶祝帖看不到；歷史粉曲線、認真起始日看不到（待 Grok Build）。2014 年開號，當日粉 26,503。",
+      "高書籤帖特徵": "原創書籤峰值 1,897；代表帖：09-19「太奶」玩笑短影書籤 1,898、09-16 Codex 白嫖・網頁當應用安裝教程 857 書籤、09-21 Qwen Image 2.1 NSFW 帖 1,336 書籤。",
+      "高觀看帖特徵": "敏銳捕捉模型破戒、NSFW 或視覺搞笑反差，09-21 圍繞「Qwen 原生 NSFW」連發三篇，單篇飆出 1,748,203 觀看。",
+      "可學重點": "① 熱點爆發時 48 小時內同一主題「連打 3 個角度」；② 用搞笑短影或視覺話題衝破垂直圈層；③ 高頻對外回覆截流大博主評論區。"
+    },
+    "replies_7d_text": "468"
+  },
+  {
+    "handle": "@Pluvio9yte",
+    "followers": 46630,
+    "followers_text": "46,630",
+    "created": "2023-06-10",
+    "daily_original": 5.4,
+    "daily_original_text": "約 5.4",
+    "replies_7d": 103,
+    "peak_views": 1240000,
+    "peak_views_text": "~124 萬",
+    "peak_views_window": "生涯峰值（2026-02-27 帖累積）",
+    "topic": "Codex／ChatGPT Pro／Astra 額度與模型檔位、Agent Skills、AI 視頻工作流、訂閱性價比",
+    "topic_tags": [
+      "Codex／Claude",
+      "Agent／Skills",
+      "AI 視頻",
+      "額度／省錢邪修"
+    ],
+    "play_style": "硬核工作流／開源資產沉澱型",
+    "partial": false,
+    "report_file": "Pluvio9yte-20260912.md",
+    "report_date": "2026-09-12",
+    "details": {
+      "收窄打法": "原創節奏克制（日均約 5.4 條，近 7 日回覆 103 條），主打「榨乾 Pro 額度」系列實測、開源 Agent Skills 與本機部署保姆級教學。",
+      "漲粉自述": "2023-06-10 開號；破圈① 2026-01-16 PayPal 中國個人賣家教程（~29 萬視），破圈② 2026-02-27 OpenClaw／Mac mini 保姆級（~124 萬視）。站外有 GitHub rnskill（約 1,553★）等開源庫。",
+      "高書籤帖特徵": "長文／Article 當資產：萬字榨乾 ChatGPT Pro Article 書籤 1,766；「Codex 無限額度」續帖書籤 1,217；頂帖書籤／讚比可接近或超過 1。",
+      "高觀看帖特徵": "剛需開源方案結合硬體算力（如 Mac mini 跑大模型），02-27 OpenClaw 保姆級長文生涯累積達約 124 萬觀看。",
+      "可學重點": "① 聚焦「榨乾訂閱性價比」痛點做對照實驗；② 將個人產出沉澱至 GitHub 倉庫打造權威資產；③ 主帖保持高品質，評論區做深度答疑。"
+    },
+    "replies_7d_text": "103"
+  },
+  {
+    "handle": "@Ryrenz",
+    "followers": 10316,
+    "followers_text": "10,316",
+    "created": "2025-03-16",
+    "daily_original": 9.0,
+    "daily_original_text": "約 9.0",
+    "replies_7d": 0,
+    "peak_views": 520915,
+    "peak_views_text": "520,915",
+    "peak_views_window": "置頂帖累積（2026-06-11 Article 累積）",
+    "topic": "GitHub／開源工具情報、Codex／Claude Code／Agent Skill、本地模型、效率軟體",
+    "topic_tags": [
+      "Codex／Claude",
+      "開源／GitHub",
+      "本地模型",
+      "Agent／Skills",
+      "獨立開發／工具"
+    ],
+    "play_style": "純廣播／深乾貨高星開源型",
+    "partial": false,
+    "report_file": "Ryrenz-20260918.md",
+    "report_date": "2026-09-18",
+    "details": {
+      "收窄打法": "極度純粹的「零社交開源情報站」，近 7 日回覆為 0，日均原創約 9.0 條流水線發布。以高星 GitHub 倉庫、名校/大廠教材與逆向神器為主。",
+      "漲粉自述": "2025-03-16 開號；認真窗約自 2026-05-04 長文起跳，05-12 自述破千（「混跡一個月」「10→1k」）；破萬自述無。當日粉 10,316。",
+      "高書籤帖特徵": "權威背書的開源資源清單與專業工具，06-11 置頂變現指南 Article 獲 3,166 書籤，Ghidra 逆向神器長文獲 2,901 書籤。",
+      "高觀看帖特徵": "全面系統化的入門指南與逆向/編程剛需神器，06-11 置頂 Article 累計達 520,915 觀看，單篇開源清單亦常破 10 萬瀏覽。",
+      "可學重點": "① 即使完全不社交回覆，依靠極致優質的開源情報也能破萬粉；② 排版標準化，標明 GitHub 地址與 Stars；③ 置頂系統長文作為永久信任錨點。"
+    },
+    "replies_7d_text": "0"
+  },
+  {
+    "handle": "@SUOHA_AI",
+    "followers": 33309,
+    "followers_text": "33,309",
+    "created": "2024-06-14",
+    "daily_original": 5.29,
+    "daily_original_text": "5.29",
+    "replies_7d": 211,
+    "peak_views": 611560,
+    "peak_views_text": "611,560",
+    "peak_views_window": "近 7 日原創（09-18 帖累積）",
+    "topic": "JEV／TypeSafe Agent 實測短影與引用帖（開源、架構、插件）、Browser Use、美股／加密貨幣",
+    "topic_tags": [
+      "開源／GitHub",
+      "Agent／Skills",
+      "AI 視頻",
+      "變現／副業"
+    ],
+    "play_style": "高頻泡圈／回覆驅動型",
+    "partial": true,
+    "report_file": "SUOHA_AI-20260922.md",
+    "report_date": "2026-09-22",
+    "details": {
+      "收窄打法": "日均原創 5.29 條，近 7 日回覆 211 條。近窗原創 37/37 全掛載媒體（短影／錄屏為主），主打 JEV/Agent 實機演示結合鏈上與美股話題。",
+      "漲粉自述": "破千／破萬慶祝帖看不到；歷史粉曲線、認真起始日看不到（待 Grok Build）。2024-06-14 開號，當日粉 33,309。",
+      "高書籤帖特徵": "JEV 可配置插件與實測：09-18 JEV 正確打開方式帖 3,906 書籤（原創書籤峰值）、09-19 JEV vs DeepSeek 實測 2,702 書籤、09-18 Browser Use＋JEV 速度 2,440 書籤。",
+      "高觀看帖特徵": "動態錄屏展示驚人自動化效果（如全自動考試、鏈上交易），09-18 JEV 開源自動交易演示短影衝上 611,560 觀看。",
+      "可學重點": "① 近窗原創 37／37 帶媒體，以短影／錄屏為主；② 緊咬最新技術名詞（JEV、Browser Use）連環展示；③ 文案用可核對數字（秒、題數），如 JEV 21 秒通過模擬考（25 題、準確率 80%）。"
+    },
+    "replies_7d_text": "211"
+  },
+  {
+    "handle": "@ai_xiaomu",
+    "followers": 48339,
+    "followers_text": "48,339",
+    "created": "2017-07-13",
+    "daily_original": 16.3,
+    "daily_original_text": "約 16.3",
+    "replies_7d": 144,
+    "peak_views": 1824245,
+    "peak_views_text": "~1,824,245",
+    "peak_views_window": "置頂長文累積（2026-08-28 帖累積）",
+    "topic": "本地模型／ComfyUI／數字人／越獄模型工作流、FDE／OPC／副業搞錢、X 增長互推",
+    "topic_tags": [
+      "本地模型",
+      "AI 視頻",
+      "變現／副業"
+    ],
+    "play_style": "硬核工作流／開源資產沉澱型",
+    "partial": false,
+    "report_file": "ai_xiaomu-20260911.md",
+    "report_date": "2026-09-11",
+    "details": {
+      "收窄打法": "原創與回覆均勻發力（日均原創約 16.3 條，近 7 日回覆 144 條）。專注本機模型（ComfyUI）、數字人、越獄模型工作流，並在圈內組織「拉爆好內容」互推。",
+      "漲粉自述": "2017 年開號，認真做內容約自 2026-04；04-29 火帖拍成視頻→萬粉，≤05-24 自稱「萬粉賬號之一」；08-29 自報約 4 個月／4.4 萬粉；當日粉約 4.83 萬。",
+      "高書籤帖特徵": "完整工作流配置、知識庫架構與保姆級 Article，05-21 Obsidian 知識庫獲全樣本最高 8,080 書籤，置頂 ComfyUI 文獲 4,979 書籤。",
+      "高觀看帖特徵": "視覺化 AI 成果演示與大眾下沉好奇心題材，08-28 置頂「ComfyUI 當導演」累積達 1,824,245 觀看，FDE 暴論帖達 111 萬觀看。",
+      "可學重點": "① 打造極高價值的知識庫與保姆級工作流換取海量書籤；② 製作視覺強烈的成片短影衝高曝光；③ 與圈內高活躍創作者形成互推矩陣。"
+    },
+    "replies_7d_text": "144"
+  },
+  {
+    "handle": "@alin_zone",
+    "followers": 9044,
+    "followers_text": "9,044",
+    "created": "2023-07-16",
+    "daily_original": 4.3,
+    "daily_original_text": "≈4.3",
+    "replies_7d": 129,
+    "peak_views": 253400,
+    "peak_views_text": "~253.4k",
+    "peak_views_window": "近窗原創樣本最高（約 08-24～09-15，n≈94；09-04 帖累積）",
+    "topic": "AI Coding／Codex／Claude（正確打開方式）、訂閱／區服／支付（美區 Apple ID）、Obsidian",
+    "topic_tags": [
+      "Codex／Claude",
+      "額度／省錢邪修",
+      "獨立開發／工具"
+    ],
+    "play_style": "高頻泡圈／回覆驅動型",
+    "partial": false,
+    "report_file": "alin_zone-20260916.md",
+    "report_date": "2026-09-16",
+    "details": {
+      "收窄打法": "日均原創約 4.3 條，回覆達 129 條（回覆是原創 4.3 倍）。圍繞 AI 編程工具正確姿勢（Codex/Claude）、美區支付與 Obsidian 提效展開。",
+      "漲粉自述": "2023-07-16 開號，但「流量打法」自述可見約自 2026-01（日區精準回覆吃長尾）。當日粉 9,044。",
+      "高書籤帖特徵": "可照做的教程與支付避坑：09-04 Codex 正確打開方式 1,217 書籤，09-14 國內手機號註冊美區 Apple ID 圖文 336 書籤，知識視頻製作法 478 書籤。",
+      "高觀看帖特徵": "工具正確用法與硬體差價資訊差：09-04 Codex 正確打開方式約 253.4k（≈253,367）觀看，09-14 美區 Apple ID 圖文約 100.4k，08-27 Mac 插頭／M1 價差約 94.2k。檔內另記較早的 04-07 Mac 清單約 50.7 萬（不在近窗樣本內）。",
+      "可學重點": "① 同一主題拆成「教程 Article（換書籤）」＋「短影/情緒帖（換曝光）」；② 專注剛需的支付與環境配置痛點；③ 大量親切回覆維持社群黏性。"
+    },
+    "replies_7d_text": "129"
+  },
+  {
+    "handle": "@gengdaJ",
+    "followers": 59170,
+    "followers_text": "59,170",
+    "created": "2025-03-06",
+    "daily_original": 1.29,
+    "daily_original_text": "1.29",
+    "replies_7d": 104,
+    "peak_views": 555547,
+    "peak_views_text": "555,547",
+    "peak_views_window": "近 7 日原創（09-24 帖累積）",
+    "topic": "Claude／Opus 可用性實操長文（開號、KYC、額度）、iPhone 工具鏈、剪映開源、TradeWinds 社群",
+    "topic_tags": [
+      "Codex／Claude",
+      "開源／GitHub",
+      "額度／省錢邪修",
+      "變現／副業"
+    ],
+    "play_style": "高頻泡圈／回覆驅動型",
+    "partial": true,
+    "report_file": "gengdaJ-20260926.md",
+    "report_date": "2026-09-26",
+    "details": {
+      "收窄打法": "極致的回覆驅動（近 7 日原創 9 條 vs 回覆 104 條，比例達 11.6:1）。原創 100% 帶圖，以 Claude Pro 實操、iPhone 工具鏈與剪映開源為主，置頂推 TradeWinds 付費社群。",
+      "漲粉自述": "09-08 自述「過去 7 個月，創作了 500 篇推文和 13 篇長文章，漲了 5 萬 Followers」；08-01 自述「五個月漲了四萬 Fo」。當日粉 59,170。",
+      "高書籤帖特徵": "涉及跨區帳號、護照 KYC 與跨系統換機的保姆級教學，換 iPhone 教程獲 1,549 書籤，Claude KYC 實操獲 1,368 書籤。",
+      "高觀看帖特徵": "Claude 新版本實操解鎖與大眾裝置換機熱點，09-24 開通 Claude Pro/Opus 實操長文拿下近窗峰值 555,547 觀看。",
+      "可學重點": "① 原創克制但單篇長文力道極深；② 置頂專注付費社群轉化，爆款專注引流吸粉；③ 善用「圖文對比」降低技術理解門檻。"
+    },
+    "replies_7d_text": "104"
+  },
+  {
+    "handle": "@goan999999",
+    "followers": 22068,
+    "followers_text": "22,068",
+    "created": "2021-12-03",
+    "daily_original": 5.43,
+    "daily_original_text": "5.43",
+    "replies_7d": 338,
+    "peak_views": 625015,
+    "peak_views_text": "625,015",
+    "peak_views_window": "近 7 日原創（09-19 帖累積）",
+    "topic": "Jev／Codex／GitHub 開源清單型引用帖（高情緒短文＋圖／短影）、Agent、省 token 教程",
+    "topic_tags": [
+      "Codex／Claude",
+      "開源／GitHub",
+      "Agent／Skills",
+      "額度／省錢邪修",
+      "AI 視頻"
+    ],
+    "play_style": "高頻泡圈／回覆驅動型",
+    "partial": true,
+    "report_file": "goan999999-20260925.md",
+    "report_date": "2026-09-25",
+    "details": {
+      "收窄打法": "引用帖為主（原創中引用帖約 94.7%），日均原創 5.43 條；近 7 日回覆 338 條，其中對外約 333 條。主打 Jev／Codex／GitHub 開源清單＋高情緒短文。",
+      "漲粉自述": "2021-12-03 開號（Bio 寫 5 年 Web3）；自述 09-04「這 3 個星期漲了 7000+ 粉絲」、09-09「28 天，漲了 10000 粉絲」、09-17「終於 20000+ 粉絲」。當日粉 22,068。",
+      "高書籤帖特徵": "省錢省 token 的極客技巧與精選開源倉庫，GitHub 7 個開源項目獲 3,718 書籤，Codex＋Jev 省 90% token 獲 3,397 書籤。",
+      "高觀看帖特徵": "高情緒評價配上熱門模型震撼清單，09-19 Jev 項目清單引用帖累計達 625,015 觀看。",
+      "可學重點": "① 善用 Quote 引用自帶流量的熱帖，附帶增量總結；② 鎖定「幫用戶省錢省算力」為核心賣點；③ 高頻穿梭於圈內評論區保持存在感。"
+    },
+    "replies_7d_text": "338"
+  },
+  {
+    "handle": "@iluciddreaming",
+    "followers": 11089,
+    "followers_text": "11,089",
+    "created": "2010-04-23",
+    "daily_original": 13.3,
+    "daily_original_text": "約 13.3",
+    "replies_7d": 35,
+    "peak_views": 157683,
+    "peak_views_text": "157,683",
+    "peak_views_window": "置頂長文累積（2026-08-01 TudouFlow Article）",
+    "topic": "好奇心／情緒短影、可抄作業生活／系統技巧（外區 Apple ID）、AI／工具短評、自研產品",
+    "topic_tags": [
+      "AI 視頻",
+      "額度／省錢邪修",
+      "獨立開發／工具"
+    ],
+    "play_style": "工廠化提示詞／固定模板串樓型",
+    "partial": true,
+    "report_file": "iluciddreaming-20260920.md",
+    "report_date": "2026-09-20",
+    "details": {
+      "收窄打法": "高頻短帖（日均約 13.3 條，近 7 日回覆 35 條），回覆多為固定話術導向 Telegram 私域。主帖專注「好奇心短影／可抄作業系統技巧」，置頂承接自研產品。",
+      "漲粉自述": "破千／破萬慶祝帖看不到；歷史粉曲線、認真起始日看不到（待 Grok Build）。2010 年開號的老號，藍 V「矽谷 Builder」；自我回覆固定句導向 Telegram「AI 工具＋一人公司」清單。",
+      "高書籤帖特徵": "可立刻照做的技巧：置頂 TudouFlow Article 1,168 書籤；09-13 外區 Apple ID 備忘錄技巧 191 書籤。",
+      "高觀看帖特徵": "新奇視覺演示、生活小技巧或外區帳號註冊教程，置頂長文累積 157,683 觀看，日常熱門短影穩定在 3-5 萬觀看。",
+      "可學重點": "① 流量（大眾好奇心短影）與定位（自研產品長文）明確分層；② 私域引流 CTA 統一把控在自回樓下；③ 圍繞「省時省力」打造強書籤帖。"
+    },
+    "replies_7d_text": "35"
+  },
+  {
+    "handle": "@justhalfbit",
+    "followers": 1532,
+    "followers_text": "1,532",
+    "created": "2023-08-17",
+    "daily_original": 0.9,
+    "daily_original_text": "約 0.9",
+    "replies_7d": 30,
+    "peak_views": 489891,
+    "peak_views_text": "489,891",
+    "peak_views_window": "近 14 日原創樣本最大（09-04 CLIProxyAPI Article 累積）",
+    "topic": "會員額度邪修（CLIProxyAPI、Codex 多 Agent）、專家/Skill 搬運（WorkBuddy）、出海 3C/SIM 卡",
+    "topic_tags": [
+      "Codex／Claude",
+      "Agent／Skills",
+      "額度／省錢邪修",
+      "變現／副業"
+    ],
+    "play_style": "低頻邪修／極客踩坑抄作業型",
+    "partial": false,
+    "report_file": "justhalfbit-20260915.md",
+    "report_date": "2026-09-15",
+    "details": {
+      "收窄打法": "原創產能極度克制（日均約 0.9 條，近 7 日原創僅 6 條），回覆為原創 5 倍。專注「踩完坑直接抄作業」的 API 轉換、額度邪修與專家提示詞包。",
+      "漲粉自述": "破百／破千／破萬自述：無；精確粉曲線看不到。2023-08-17 開號，公開可見時間線自 2026-05-09；當日粉 1,532。流量雙峰：07-30～08-04 英國卡系列、09-04～09-08 CLIProxyAPI＋WorkBuddy。",
+      "高書籤帖特徵": "書籤數常超過自身總粉絲數，09-08 WorkBuddy 專家提示詞包獲 1,280 書籤（粉絲 1,532），CLIProxyAPI 長文獲 911 書籤。",
+      "高觀看帖特徵": "突破官方限制、將單一帳號價值放大的邪修方案，09-04 《15 分鐘把 Codex 變成 API Key》Article 累計高達 489,891 觀看。",
+      "可學重點": "① 「一份付費訂閱變多把鑰匙」是頂級爆款密碼；② 用長文沉澱完整步驟，隔日短帖引流；③ 粉絲少照樣能產出數千書籤的大爆款。"
+    },
+    "replies_7d_text": "30"
+  },
+  {
+    "handle": "@xingbugengming",
+    "followers": 4509,
+    "followers_text": "4,509",
+    "created": "2026-01-11",
+    "daily_original": 3.3,
+    "daily_original_text": "≈3.3",
+    "replies_7d": 164,
+    "peak_views": 844980,
+    "peak_views_text": "~844,980",
+    "peak_views_window": "近 28 日原創（08-20 聶小倩 AI 電影二創）",
+    "topic": "Codex 額度／插件／Plus 當 Pro、Remotion／動畫、小紅書／自媒體運營變現、AI 電影二創",
+    "topic_tags": [
+      "Codex／Claude",
+      "額度／省錢邪修",
+      "AI 視頻",
+      "變現／副業"
+    ],
+    "play_style": "高頻泡圈／回覆驅動型",
+    "partial": false,
+    "report_file": "xingbugengming-20260912.md",
+    "report_date": "2026-09-12",
+    "details": {
+      "收窄打法": "日均原創 ≈3.3 條，近 7 日回覆 164 條（約原創 7 倍）；近 28 日原創 92.2% 含媒體。題材：Codex 額度／插件／Plus 當 Pro、Remotion／動畫、小紅書變現。",
+      "漲粉自述": "自述此號為重啟 X（二次入場），主場偏小紅書，X＝圈層工位；03-22 藍 V。X 現約 4.5k（當日 4,509），未破萬；破千精確日看不到。",
+      "高書籤帖特徵": "跨平台運營秘訣與實用技巧：07-09 置頂小紅書運營 Article 1,849 書籤，08-20《聶小倩》二創 2,133 書籤，08-28 Codex Plus 當 Pro 1,922 書籤。",
+      "高觀看帖特徵": "視覺衝擊強的 AI 電影二創與限額技巧：08-20《聶小倩》AI 電影二創約 844,980 觀看，08-28 Codex Plus 當 Pro 約 683,570 觀看。",
+      "可學重點": "① 拒絕純文字安利，九成原創帶動態視頻展示；② 善抓限額公憤話題帶動傳播；③ 將跨平台成功經驗寫成置頂長文鎖定權威。"
+    },
+    "replies_7d_text": "164"
+  },
+  {
+    "handle": "@xmglab",
+    "followers": 5140,
+    "followers_text": "5,140",
+    "created": "2024-03-16",
+    "daily_original": 12.9,
+    "daily_original_text": "≈12.9",
+    "replies_7d": 815,
+    "peak_views": 722000,
+    "peak_views_text": "~722k",
+    "peak_views_window": "置頂 Article 累積（09-10 iPhone 改定位長文）",
+    "topic": "AI Coding 工具博弈（Codex、Grok、Cursor）、訂閱性價比與額度、Grok Bot VPS、iPhone 改定位",
+    "topic_tags": [
+      "Codex／Claude",
+      "額度／省錢邪修",
+      "獨立開發／工具"
+    ],
+    "play_style": "高頻泡圈／回覆驅動型",
+    "partial": true,
+    "report_file": "xmglab-20260913.md",
+    "report_date": "2026-09-13",
+    "details": {
+      "收窄打法": "超高頻對外回覆（近 7 日回覆 815 條，約原創 9 倍），日均原創 ≈12.9 條。「兄弟們」親切口吻開頭，主打 AI Coding 工具博弈、訂閱性價比與跨境裝置玩機。",
+      "漲粉自述": "2024-03-16 開號，自述「玩 X 兩年粉絲都是兩位數」，約 2026-07 中起認真玩：「21 天漲粉 1500+」「35 天漲粉 2800+、第一次領收益 $481.67」，38 天破 3k。當日粉 5,140；站外自稱全網 50W+（未核）。",
+      "高書籤帖特徵": "解決跨境網路、海外卡與改機硬需求的實用指南，09-10 置頂 iPhone 修改定位 Article 斬獲 2,128 書籤，Grok Bot VPS 出口長文獲 850 書籤。",
+      "高觀看帖特徵": "大眾都用得上的玩機出海剛需：09-10 置頂 iPhone 改定位 Article 約 722,380 觀看（表內寫 ~722k）；09-08 Grok Bot VPS 當出口 Article 約 177k。",
+      "可學重點": "① 將成長歷程包裝為「認真玩 X 天」里程碑文章；② 教程 Article 賺書籤，翌日短片二次分發賺曝光；③ 用 Quote 連載熱點降低原創阻力。"
+    },
+    "replies_7d_text": "815"
+  },
+  {
+    "handle": "@yupi996",
+    "followers": 30156,
+    "followers_text": "30,156",
+    "created": "2025-12-15",
+    "daily_original": 3.57,
+    "daily_original_text": "3.57",
+    "replies_7d": 12,
+    "peak_views": 331486,
+    "peak_views_text": "331,486",
+    "peak_views_window": "開號置頂長文累積（2025-12 跨平台成績單長文）",
+    "topic": "AI 編程工具熱點實測短影／Article（Opus、Jev、Codex）、Jev 教程／案例、自製產品演示",
+    "topic_tags": [
+      "Codex／Claude",
+      "AI 視頻",
+      "獨立開發／工具"
+    ],
+    "play_style": "IP 降維打擊／熱點實測短影型",
+    "partial": true,
+    "report_file": "yupi996-20260924.md",
+    "report_date": "2026-09-24",
+    "details": {
+      "收窄打法": "跨平台成熟 IP 降維，純原創為主（近窗 25 條原創中 23 條純原創，回覆僅 12 條）。以實測短影快打熱點（Opus、Jev、Codex），導流自有網站與教育產品。",
+      "漲粉自述": "X 破千／破萬慶祝帖看不到；Bio 自稱全網 200w 關注（程序員魚皮）。2025-12-15 開號，開號翌日發置頂長文；當日粉 30,156。",
+      "高書籤帖特徵": "結構化開箱與保姆級代碼實戰教學，09-21 Jev 模型實戰測評與保姆級教程 Article 斬獲 353 書籤，Jev 案例庫帖獲 299 書籤。",
+      "高觀看帖特徵": "開號置頂自述長文累積 331,486 觀看；近窗以「一段提示詞復刻 Cursor」等高情緒震撼短影為主，Opus 實測短影獲 59,761 觀看。",
+      "可學重點": "① 開號置頂一篇具備極強信任背書的個人履歷長文；② 用短影錄屏直觀證明模型能力；③ 自有產品導流與乾貨分享有機結合。"
+    },
+    "replies_7d_text": "12"
+  }
+]
+  </script>
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <header class="header">
+      <div class="badge-pill">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+        中文區 AI 工具博主數據專題
+      </div>
+      <h1 class="title">19 個中文區 AI 工具博主 X 帳號對比看板</h1>
+      <p class="subtitle">深度拆解 19 個頭部與潛力帳號之運營節奏、內容特徵、互動模式、漲粉邏輯與可複製重點。</p>
+
+      <!-- Section 1 One-sentence Conclusion Callout -->
+      <div class="conclusion-box">
+        <div class="conclusion-header">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          核心結論：這些號漲粉的共同規律
+        </div>
+        <div class="conclusion-content">
+          中文區 AI 工具博主漲粉的共同規律，是採取<strong>「曝光與收藏分工的雙引擎打法」</strong>：先用<strong>即時熱點模型、爭議痛點或變現故事短帖衝高瀏覽</strong>，再用<strong>可直接複製照做的提示詞包、開源清單與保姆級步驟長文沉澱高書籤與信任</strong>，並藉由<strong>高頻回覆泡圈或自我串樓</strong>將流量轉化為關注。
+        </div>
+      </div>
+    </header>
+
+    <!-- Stat Highlights Overview -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-label">分析樣本總數</span>
+        <span class="stat-value">19 個帳號</span>
+        <span class="stat-desc">涵蓋千粉至近六萬粉</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">最高粉絲規模</span>
+        <span class="stat-value">59,170</span>
+        <span class="stat-desc">@gengdaJ（逸塵）</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">樣本最高單篇觀看</span>
+        <span class="stat-value">~2,478,312</span>
+        <span class="stat-desc">@AdrianPunk115（FDE 轉崗長文）</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">營運模式分類</span>
+        <span class="stat-value">6 大流派</span>
+        <span class="stat-desc">回覆泡圈型佔 11 個（58%）</span>
+      </div>
+    </section>
+
+    <!-- Follower Counts Inline SVG Bar Chart -->
+    <section class="chart-section">
+      <div class="chart-header">
+        <div>
+          <h2 class="chart-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="12" width="4" height="8" rx="1"/>
+              <rect x="10" y="8" width="4" height="12" rx="1"/>
+              <rect x="17" y="4" width="4" height="16" rx="1"/>
+            </svg>
+            各帳號粉絲規模分佈長條圖
+          </h2>
+          <p class="chart-subtitle">純原生 JavaScript 生成向量長條圖，即時隨篩選與搜尋動態連動</p>
+        </div>
+        <div id="chart-summary-badge" class="badge badge-complete">
+          顯示 19 個帳號
+        </div>
+      </div>
+      <div class="chart-container" id="chart-wrapper">
+        <!-- Pure SVG rendered via JS -->
+      </div>
+    </section>
+
+    <!-- Toolbar: Search & Filters -->
+    <section class="toolbar">
+      <div class="toolbar-top">
+        <div class="search-wrapper">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input type="text" id="search-input" class="search-input" placeholder="搜尋帳號 handle、主題材文字、提示詞、Codex..." autocomplete="off">
+          <button id="search-clear" class="search-clear-btn" title="清除搜尋">✕</button>
+        </div>
+      </div>
+
+      <div class="filters-row">
+        <div class="filter-group">
+          <label class="filter-label" for="filter-style">打法分類</label>
+          <select id="filter-style" class="filter-select">
+            <option value="">全部打法分類 (19)</option>
+            <option value="高頻泡圈／回覆驅動型">高頻泡圈／回覆驅動型 (11)</option>
+            <option value="工廠化提示詞／固定模板串樓型">工廠化提示詞／固定模板串樓型 (2)</option>
+            <option value="純廣播／深乾貨高星開源型">純廣播／深乾貨高星開源型 (1)</option>
+            <option value="硬核工作流／開源資產沉澱型">硬核工作流／開源資產沉澱型 (2)</option>
+            <option value="低頻邪修／極客踩坑抄作業型">低頻邪修／極客踩坑抄作業型 (2)</option>
+            <option value="IP 降維打擊／熱點實測短影型">IP 降維打擊／熱點實測短影型 (1)</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label" for="filter-tag">主題材標籤</label>
+          <select id="filter-tag" class="filter-select">
+            <option value="">全部主題標籤</option>
+            <option value="Codex／Claude">Codex／Claude</option>
+            <option value="開源／GitHub">開源／GitHub</option>
+            <option value="提示詞">提示詞</option>
+            <option value="變現／副業">變現／副業</option>
+            <option value="本地模型">本地模型</option>
+            <option value="AI 視頻">AI 視頻</option>
+            <option value="Agent／Skills">Agent／Skills</option>
+            <option value="額度／省錢邪修">額度／省錢邪修</option>
+            <option value="獨立開發／工具">獨立開發／工具</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label" for="filter-report">報告完整度</label>
+          <select id="filter-report" class="filter-select">
+            <option value="">全部報告類型 (19)</option>
+            <option value="complete">完整報告 (9)</option>
+            <option value="partial">部分報告・Grok 缺口 (10)</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label">&nbsp;</label>
+          <button id="btn-clear-all" class="btn-reset" title="重設所有條件">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+              <path d="M3 3v5h5"/>
+            </svg>
+            清除篩選
+          </button>
+        </div>
+      </div>
+
+      <div class="toolbar-actions">
+        <div class="count-indicator">
+          目前顯示 <strong id="filter-count">19</strong>／19 個帳號
+        </div>
+        <div style="font-size: 12px; color: var(--text-dim);">
+          點擊任一行可展開完整打法詳情與原檔摘要
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Comparison Table -->
+    <div class="table-wrapper">
+      <div class="table-responsive">
+        <table id="main-table">
+          <thead>
+            <tr>
+              <th data-col="handle" class="sorted-asc">
+                <span class="th-content">Handle <span class="sort-icon">▲</span></span>
+              </th>
+              <th data-col="followers">
+                <span class="th-content">粉絲數 <span class="sort-icon">⇅</span></span>
+              </th>
+              <th data-col="created">
+                <span class="th-content">開號日 <span class="sort-icon">⇅</span></span>
+              </th>
+              <th data-col="daily_original">
+                <span class="th-content">日均原創 <span class="sort-icon">⇅</span></span>
+              </th>
+              <th data-col="replies_7d">
+                <span class="th-content">近 7 日回覆 <span class="sort-icon">⇅</span></span>
+              </th>
+              <th data-col="peak_views">
+                <span class="th-content">峰值帖觀看 <span class="sort-icon">⇅</span></span>
+              </th>
+              <th data-col="peak_views_window">
+                <span class="th-content">峰值時間範圍 <span class="sort-icon">⇅</span></span>
+              </th>
+              <th data-col="topic">
+                <span class="th-content">主題材 <span class="sort-icon">⇅</span></span>
+              </th>
+              <th data-col="play_style">
+                <span class="th-content">打法分類 <span class="sort-icon">⇅</span></span>
+              </th>
+              <th data-col="partial">
+                <span class="th-content">報告類型 <span class="sort-icon">⇅</span></span>
+              </th>
+              <th class="no-sort" style="width: 44px; text-align: center;">
+                詳情
+              </th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <!-- Dynamically populated via JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Data Limitations Section -->
+    <footer class="footer-limitations">
+      <div class="limitations-header">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2">
+          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+          <line x1="12" y1="9" x2="12" y2="13"/>
+          <line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+        資料限制與分析邊界說明
+      </div>
+
+      <div class="limitations-notice">
+        本看板所有數據與文字拆解嚴格本於 <code>agy-19-report.md</code> 綜合對比表及 19 份原始報告檔案。解讀各項指標時請務必注意以下邊界限制：
+      </div>
+
+      <ul class="limitations-list">
+        <li class="limitation-item">
+          <div class="limitation-title">
+            <span>(a) 數字為各報告查詢時點累積值</span>
+          </div>
+          <div class="limitation-text">
+            檔案所列之觀看數、讚數、轉發數與書籤數，均為各報告在 2026 年 9 月特定時點擷取之累計數字，非發布首日自然流量。歷史較長之貼文（如數月前的置頂長文）累積時間遠長於近 7 日短帖，曝光量級存在時間積累之固有差異。
+          </div>
+        </li>
+
+        <li class="limitation-item">
+          <div class="limitation-title">
+            <span>(b) 峰值觀看時間範圍各號不同</span>
+          </div>
+          <div class="limitation-text">
+            各帳號「峰值帖觀看」取自原檔記載最高值：部分為近 7 日原創峰值（如 @GoSailGlobal、@SUOHA_AI、@goan999999），部分為置頂帖累積或生涯／近 28 日峰值（如 @AdrianPunk115、@ai_xiaomu、@Pluvio9yte、@Ryrenz、@iluciddreaming、@yupi996、@xingbugengming、@Fred834567），時間窗不一，不宜直接橫向比較。
+          </div>
+        </li>
+
+        <li class="limitation-item">
+          <div class="limitation-title">
+            <span>(c) 19 份中有 10 份為「部分報告」</span>
+          </div>
+          <div class="limitation-text">
+            10 個帳號標記為「部分報告・Grok Build 缺口」（@AIExplorerTim、@AI_DVD6、@Lonely__MH、@SUOHA_AI、@xmglab、@iluciddreaming、@yupi996、@goan999999、@gengdaJ、@GoSailGlobal），僅依賴 X API 與公開時間線資料，缺少外部搜尋引擎、全網社群口碑檢索與站外軌跡校驗。
+          </div>
+        </li>
+
+        <li class="limitation-item">
+          <div class="limitation-title">
+            <span>(d) 日均原創部分為抽樣粗算</span>
+          </div>
+          <div class="limitation-text">
+            各號日均原創依各檔統計方式記錄，部分是抽樣粗算（如 @Pluvio9yte 以 9 日跨度粗算、@ai_xiaomu 以有帖日的樣本窗計），數字前標「約」「≈」者不宜當精確值；部分帳號原創統計包含 Quote（引用帖），部分排除回覆；@Jolyne_AI 原檔僅提供含回覆總數（約 164）與回覆佔比約 48%，未單獨給出獨立近 7 日日均純原創與回覆數，故嚴格標示為「檔內無」。
+          </div>
+        </li>
+
+        <li class="limitation-item">
+          <div class="limitation-title">
+            <span>(e) 缺乏連續歷史粉絲增長曲線</span>
+          </div>
+          <div class="limitation-text">
+            X 官方公開 API 不提供帳號歷史粉絲數時間序列。除少數博主自發發布里程碑慶祝帖（如 @Fred834567 記錄 1k 至 8k 節點、@xmglab 自述 認真玩 21 天漲粉 1500+、35 天漲粉 2800+ 並首次領收益）外，絕大多數帳號無法還原成長階段的精確日度增長曲線。
+          </div>
+        </li>
+
+        <li class="limitation-item">
+          <div class="limitation-title">
+            <span>(f) 採樣時間切片存在跨度差異</span>
+          </div>
+          <div class="limitation-text">
+            19 份報告分析日期分佈於 2026-09-10 至 2026-09-27 之間。文中所指「近 7 日」為各報告產出當時向前回溯之相對切片，並非同一固定日曆週，各博主受不同週期之技術熱點（如 Jev、Codex、Opus 等發布事件）影響程度不同。
+          </div>
+        </li>
+
+        <li class="limitation-item">
+          <div class="limitation-title">
+            <span>(g) 刪帖、私域互動與商業轉化不可見</span>
+          </div>
+          <div class="limitation-text">
+            受限於公開只讀分析權限，無法追蹤博主歷史上可能已刪除之貼文。私信（DM）諮詢、付費社群（如 TradeWinds）或站外私域（Telegram、微信群）之真實留存與商業轉化率，均無法從 X 平台公開數據中驗證。
+          </div>
+        </li>
+
+        <li class="limitation-item">
+          <div class="limitation-title">
+            <span>(h) 無編造、推估或主觀修飾</span>
+          </div>
+          <div class="limitation-text">
+            本看板所有數字完全取自 agy-19-report.md 對比表及原始拆號報告，缺失值統一顯示為「檔內無」並置於排序末端，各欄原始文本寫法（如「約 2.4」「~253.4k」）均如實完整保留。
+          </div>
+        </li>
+      </ul>
+
+      <div class="copyright">
+        19 個中文區 AI 工具博主 X 帳號對比看板 · 離線單檔案版 · 本地瀏覽器專用
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- JavaScript Implementation -->
+  <script>
+    (function() {
+      "use strict";
+
+      // 1. Read inlined JSON data
+      let DATA = [];
+      try {
+        const rawJson = document.getElementById("dashboard-raw-data").textContent;
+        DATA = JSON.parse(rawJson);
+      } catch (err) {
+        console.error("無法解析內嵌資料:", err);
+      }
+
+      // State Management
+      let currentData = [...DATA];
+      let sortColumn = "handle";
+      let sortDirection = "asc";
+      const expandedRows = new Set();
+
+      // DOM Elements
+      const searchInput = document.getElementById("search-input");
+      const searchClearBtn = document.getElementById("search-clear");
+      const filterStyle = document.getElementById("filter-style");
+      const filterTag = document.getElementById("filter-tag");
+      const filterReport = document.getElementById("filter-report");
+      const btnClearAll = document.getElementById("btn-clear-all");
+      const filterCountEl = document.getElementById("filter-count");
+      const tableBody = document.getElementById("table-body");
+      const mainTable = document.getElementById("main-table");
+      const chartWrapper = document.getElementById("chart-wrapper");
+      const chartSummaryBadge = document.getElementById("chart-summary-badge");
+
+      // 2. Sorting Helpers
+      function getSortValue(item, col) {
+        switch (col) {
+          case "handle":
+            return item.handle ? item.handle.toLowerCase() : "";
+          case "followers":
+            return item.followers !== null ? item.followers : null;
+          case "created":
+            return item.created ? item.created : null;
+          case "daily_original":
+            return item.daily_original !== null ? item.daily_original : null;
+          case "replies_7d":
+            return item.replies_7d !== null ? item.replies_7d : null;
+          case "peak_views":
+            return item.peak_views !== null ? item.peak_views : null;
+          case "peak_views_window":
+            return item.peak_views_window || "";
+          case "topic":
+            return item.topic || "";
+          case "play_style":
+            return item.play_style || "";
+          case "partial":
+            return item.partial ? 1 : 0;
+          default:
+            return null;
+        }
+      }
+
+      function sortDataset(list, col, direction) {
+        return [...list].sort((a, b) => {
+          const valA = getSortValue(a, col);
+          const valB = getSortValue(b, col);
+
+          const isNullA = valA === null || valA === undefined || valA === "";
+          const isNullB = valB === null || valB === undefined || valB === "";
+
+          // Strict rule: "數字缺失在頁面上顯示「檔內無」，排序時無論升序降序都放最後。"
+          if (isNullA && isNullB) return 0;
+          if (isNullA) return 1;
+          if (isNullB) return -1;
+
+          let cmp = 0;
+          if (typeof valA === "number" && typeof valB === "number") {
+            cmp = valA - valB;
+          } else {
+            cmp = String(valA).localeCompare(String(valB), "zh-Hant");
+          }
+          return direction === "asc" ? cmp : -cmp;
+        });
+      }
+
+      // 3. Filtering Logic
+      function applyFilters() {
+        const searchTxt = (searchInput.value || "").trim().toLowerCase();
+        const styleVal = filterStyle.value;
+        const tagVal = filterTag.value;
+        const reportVal = filterReport.value;
+
+        currentData = DATA.filter(item => {
+          // Search query match
+          if (searchTxt) {
+            const h = (item.handle || "").toLowerCase();
+            const t = (item.topic || "").toLowerCase();
+            const tags = (item.topic_tags || []).join(" ").toLowerCase();
+            const s = (item.play_style || "").toLowerCase();
+            const d = item.details ? Object.values(item.details).join(" ").toLowerCase() : "";
+            const matches = h.includes(searchTxt) || t.includes(searchTxt) || tags.includes(searchTxt) || s.includes(searchTxt) || d.includes(searchTxt);
+            if (!matches) return false;
+          }
+
+          // Style dropdown match
+          if (styleVal && item.play_style !== styleVal) {
+            return false;
+          }
+
+          // Tag dropdown match
+          if (tagVal && (!item.topic_tags || !item.topic_tags.includes(tagVal))) {
+            return false;
+          }
+
+          // Report type dropdown match
+          if (reportVal === "complete" && item.partial !== false) {
+            return false;
+          }
+          if (reportVal === "partial" && item.partial !== true) {
+            return false;
+          }
+
+          return true;
+        });
+
+        // Apply active sorting
+        currentData = sortDataset(currentData, sortColumn, sortDirection);
+
+        // Update UI
+        updateToolbarState();
+        renderTable();
+        renderChart();
+      }
+
+      function updateToolbarState() {
+        const query = searchInput.value.trim();
+        if (query.length > 0) {
+          searchClearBtn.classList.add("active");
+        } else {
+          searchClearBtn.classList.remove("active");
+        }
+        filterCountEl.textContent = currentData.length;
+        chartSummaryBadge.textContent = "顯示 " + currentData.length + " 個帳號";
+      }
+
+      // 4. Render Table
+      function renderTable() {
+        tableBody.innerHTML = "";
+
+        if (currentData.length === 0) {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td colspan="11" class="empty-state">
+              <div class="empty-state-title">查無符合條件的帳號</div>
+              <div>請嘗試縮短搜尋關鍵字，或點擊上方「清除篩選」按鈕重設篩選。</div>
+            </td>
+          `;
+          tableBody.appendChild(tr);
+          return;
+        }
+
+        currentData.forEach(item => {
+          const isExpanded = expandedRows.has(item.handle);
+          const pureHandle = item.handle.replace(/^@/, "");
+
+          // Format cells
+          const followersDisp = item.followers !== null ? item.followers.toLocaleString("en-US") : `<span class="badge-na">檔內無</span>`;
+          const createdDisp = item.created ? item.created : `<span class="badge-na">檔內無</span>`;
+          const dailyDisp = item.daily_original !== null ? (item.daily_original_text || item.daily_original) : `<span class="badge-na">檔內無</span>`;
+          const repliesDisp = item.replies_7d !== null ? (item.replies_7d_text || item.replies_7d.toLocaleString("en-US")) : `<span class="badge-na">檔內無</span>`;
+          const peakDisp = item.peak_views !== null ? (item.peak_views_text || item.peak_views.toLocaleString("en-US")) : `<span class="badge-na">檔內無</span>`;
+
+          const reportBadge = item.partial
+            ? `<span class="badge badge-partial">部分報告</span>`
+            : `<span class="badge badge-complete">完整報告</span>`;
+
+          const tagBadges = (item.topic_tags || []).map(t => `<span class="badge-tag">${t}</span>`).join("");
+
+          // Main Row
+          const tr = document.createElement("tr");
+          tr.className = "data-row" + (isExpanded ? " expanded" : "");
+          tr.setAttribute("data-handle", item.handle);
+
+          tr.innerHTML = `
+            <td class="cell-handle">
+              <a href="https://x.com/${pureHandle}" target="_blank" rel="noopener" title="前往 X 個人主頁" onclick="event.stopPropagation();">
+                ${item.handle}
+                <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </td>
+            <td><strong>${followersDisp}</strong></td>
+            <td style="color: var(--text-muted); font-size: 12px;">${createdDisp}</td>
+            <td>${dailyDisp}</td>
+            <td>${repliesDisp}</td>
+            <td><strong>${peakDisp}</strong></td>
+            <td class="cell-window">${item.peak_views_window || "檔內未明確"}</td>
+            <td class="cell-topic">
+              <div>${item.topic || "檔內無"}</div>
+              <div style="margin-top: 4px;">${tagBadges}</div>
+            </td>
+            <td><span class="badge badge-style" title="${item.play_style}">${item.play_style}</span></td>
+            <td>${reportBadge}</td>
+            <td style="text-align: center;">
+              <button class="btn-expand-icon" title="展開詳情" aria-expanded="${isExpanded}">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+            </td>
+          `;
+
+          tr.addEventListener("click", () => {
+            toggleRowExpansion(item.handle);
+          });
+
+          tableBody.appendChild(tr);
+
+          // Expanded Details Row
+          if (isExpanded) {
+            const detailsTr = document.createElement("tr");
+            detailsTr.className = "details-row";
+            detailsTr.setAttribute("data-details-for", item.handle);
+
+            const details = item.details || {};
+            const shrinkStyle = details["收窄打法"] || "原檔未單獨提煉";
+            const growthSelf = details["漲粉自述"] || "原檔未單獨提煉";
+            const bookmarkFeat = details["高書籤帖特徵"] || "原檔未單獨提煉";
+            const viewsFeat = details["高觀看帖特徵"] || "原檔未單獨提煉";
+            const lessons = details["可學重點"] || "原檔未單獨提煉";
+
+            detailsTr.innerHTML = `
+              <td colspan="11">
+                <div class="details-container">
+                  <div class="details-meta-bar">
+                    <div class="details-meta-left">
+                      <span class="meta-tag">帳號：<strong>${item.handle}</strong></span>
+                      <span class="meta-tag">打法流派：<strong>${item.play_style}</strong></span>
+                      <span class="meta-tag">原始報告：<code>${item.report_file}</code></span>
+                      <span class="meta-tag">採樣日期：<strong>${item.report_date}</strong></span>
+                      <span class="meta-tag">狀態：<strong>${item.partial ? "部分報告（Grok缺口）" : "完整報告"}</strong></span>
+                    </div>
+                    <a href="https://x.com/${pureHandle}" target="_blank" rel="noopener" class="btn-visit-x">
+                      造訪 X 個人主頁
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  </div>
+
+                  <div class="details-grid">
+                    <div class="detail-card">
+                      <div class="detail-card-title">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        收窄打法與發帖模式
+                      </div>
+                      <div class="detail-card-body">${shrinkStyle}</div>
+                    </div>
+
+                    <div class="detail-card">
+                      <div class="detail-card-title">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                          <polyline points="17 6 23 6 23 12"></polyline>
+                        </svg>
+                        漲粉自述與成長節奏
+                      </div>
+                      <div class="detail-card-body">${growthSelf}</div>
+                    </div>
+
+                    <div class="detail-card">
+                      <div class="detail-card-title">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        高書籤帖特徵（沉澱信任與收藏）
+                      </div>
+                      <div class="detail-card-body">${bookmarkFeat}</div>
+                    </div>
+
+                    <div class="detail-card">
+                      <div class="detail-card-title">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <line x1="2" y1="12" x2="22" y2="12"></line>
+                          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                        高觀看帖特徵（衝擴散與推薦）
+                      </div>
+                      <div class="detail-card-body">${viewsFeat}</div>
+                    </div>
+
+                    <div class="detail-card span-full">
+                      <div class="detail-card-title">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                          <polyline points="14 2 14 8 20 8"></polyline>
+                          <line x1="16" y1="13" x2="8" y2="13"></line>
+                          <line x1="16" y1="17" x2="8" y2="17"></line>
+                          <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        可學 3–5 點精華策略（給做 AI 工具帖的人）
+                      </div>
+                      <div class="detail-card-body">${lessons}</div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            `;
+            tableBody.appendChild(detailsTr);
+          }
+        });
+      }
+
+      function toggleRowExpansion(handle) {
+        if (expandedRows.has(handle)) {
+          expandedRows.delete(handle);
+        } else {
+          expandedRows.add(handle);
+        }
+        renderTable();
+      }
+
+      // 5. Render Horizontal Bar Chart (Pure SVG)
+      function renderChart() {
+        chartWrapper.innerHTML = "";
+
+        if (currentData.length === 0) {
+          chartWrapper.innerHTML = `<div style="padding: 24px; text-align: center; color: var(--text-dim);">篩選條件下無帳號可顯示圖表</div>`;
+          return;
+        }
+
+        // Extract items with follower numbers
+        const items = [...currentData];
+        const maxFollowers = Math.max(...items.map(d => d.followers || 0), 1000);
+
+        const rowHeight = 34;
+        const marginTop = 20;
+        const marginBottom = 20;
+        // Grok Bot 修正：依容器實際寬度畫圖，避免手機上整張圖等比縮小、文字過小
+        const svgWidth = Math.max(330, Math.round(chartWrapper.clientWidth || 860));
+        const labelWidth = svgWidth < 560 ? 128 : 145; // space for @handle
+        const valWidth = svgWidth < 560 ? 58 : 75;   // space for numeric value on right
+        const totalHeight = items.length * rowHeight + marginTop + marginBottom;
+        const barAreaWidth = svgWidth - labelWidth - valWidth - 30;
+
+        let svgHtml = `
+          <svg class="svg-chart" viewBox="0 0 ${svgWidth} ${totalHeight}" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#38bdf8" />
+                <stop offset="100%" stop-color="#6366f1" />
+              </linearGradient>
+              <linearGradient id="barGradHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#34d399" />
+                <stop offset="100%" stop-color="#10b981" />
+              </linearGradient>
+            </defs>
+        `;
+
+        // Render rows
+        items.forEach((item, idx) => {
+          const y = marginTop + idx * rowHeight;
+          const followers = item.followers || 0;
+          const barW = Math.max(2, (followers / maxFollowers) * barAreaWidth);
+          const fText = item.followers !== null ? followers.toLocaleString("en-US") : "檔內無";
+          const barX = labelWidth + 10;
+          const isSelected = expandedRows.has(item.handle);
+
+          svgHtml += `
+            <g class="chart-bar-group" style="cursor: pointer;" data-handle="${item.handle}">
+              <!-- Background Row Highlight -->
+              <rect x="0" y="${y - 2}" width="${svgWidth}" height="${rowHeight - 4}" rx="4" fill="${isSelected ? "rgba(99, 102, 241, 0.15)" : "transparent"}" class="chart-row-bg" />
+
+              <!-- Handle Label -->
+              <text x="${labelWidth}" y="${y + 16}" text-anchor="end" fill="${isSelected ? "#38bdf8" : "#94a3b8"}" font-size="12.5" font-weight="${isSelected ? "700" : "500"}" font-family="var(--font-stack)">
+                ${item.handle}
+              </text>
+
+              <!-- Progress Track -->
+              <rect x="${barX}" y="${y + 4}" width="${barAreaWidth}" height="16" rx="4" fill="rgba(255,255,255,0.04)" />
+
+              <!-- Active Data Bar -->
+              <rect x="${barX}" y="${y + 4}" width="${barW}" height="16" rx="4" fill="${isSelected ? "url(#barGradHighlight)" : "url(#barGrad)"}" />
+
+              <!-- Value Text -->
+              <text x="${barX + barW + 8}" y="${y + 16}" fill="${isSelected ? "#34d399" : "#f1f5f9"}" font-size="12" font-weight="600" font-family="var(--font-stack)">
+                ${fText}
+              </text>
+            </g>
+          `;
+        });
+
+        svgHtml += `</svg>`;
+        chartWrapper.innerHTML = svgHtml;
+
+        // Add click events to SVG chart rows
+        const groups = chartWrapper.querySelectorAll(".chart-bar-group");
+        groups.forEach(g => {
+          g.addEventListener("click", () => {
+            const h = g.getAttribute("data-handle");
+            if (h) {
+              toggleRowExpansion(h);
+              // scroll to table row
+              const targetRow = document.querySelector(`tr[data-handle="${h}"]`);
+              if (targetRow) {
+                targetRow.scrollIntoView({ behavior: "smooth", block: "center" });
+              }
+            }
+          });
+        });
+      }
+
+      // 6. Header Sorting Handlers
+      function setupSortHeaders() {
+        const ths = mainTable.querySelectorAll("th[data-col]");
+        ths.forEach(th => {
+          th.addEventListener("click", () => {
+            const col = th.getAttribute("data-col");
+            if (!col) return;
+
+            if (sortColumn === col) {
+              // Toggle direction
+              sortDirection = sortDirection === "asc" ? "desc" : "asc";
+            } else {
+              sortColumn = col;
+              // Default to desc for metrics, asc for others
+              sortDirection = ["followers", "daily_original", "replies_7d", "peak_views"].includes(col) ? "desc" : "asc";
+            }
+
+            // Update UI class indicators
+            ths.forEach(otherTh => {
+              otherTh.classList.remove("sorted-asc", "sorted-desc");
+              const icon = otherTh.querySelector(".sort-icon");
+              if (icon) icon.textContent = "⇅";
+            });
+
+            th.classList.add(sortDirection === "asc" ? "sorted-asc" : "sorted-desc");
+            const activeIcon = th.querySelector(".sort-icon");
+            if (activeIcon) {
+              activeIcon.textContent = sortDirection === "asc" ? "▲" : "▼";
+            }
+
+            applyFilters();
+          });
+        });
+      }
+
+      // 7. Event Listeners
+      function setupEventListeners() {
+        let _rt; window.addEventListener("resize", () => { clearTimeout(_rt); _rt = setTimeout(renderChart, 150); });
+        // Real-time search
+        searchInput.addEventListener("input", () => {
+          applyFilters();
+        });
+
+        searchClearBtn.addEventListener("click", () => {
+          searchInput.value = "";
+          searchInput.focus();
+          applyFilters();
+        });
+
+        // Dropdowns
+        filterStyle.addEventListener("change", applyFilters);
+        filterTag.addEventListener("change", applyFilters);
+        filterReport.addEventListener("change", applyFilters);
+
+        // Clear All button
+        btnClearAll.addEventListener("click", () => {
+          searchInput.value = "";
+          filterStyle.value = "";
+          filterTag.value = "";
+          filterReport.value = "";
+          sortColumn = "handle";
+          sortDirection = "asc";
+
+          // Reset sort headers
+          const ths = mainTable.querySelectorAll("th[data-col]");
+          ths.forEach(otherTh => {
+            otherTh.classList.remove("sorted-asc", "sorted-desc");
+            const icon = otherTh.querySelector(".sort-icon");
+            if (icon) icon.textContent = "⇅";
+          });
+          const defaultTh = mainTable.querySelector('th[data-col="handle"]');
+          if (defaultTh) {
+            defaultTh.classList.add("sorted-asc");
+            const icon = defaultTh.querySelector(".sort-icon");
+            if (icon) icon.textContent = "▲";
+          }
+
+          applyFilters();
+        });
+      }
+
+      // Initialize
+      setupSortHeaders();
+      setupEventListeners();
+      applyFilters();
+
+    })();
+  </script>
+</body>
+</html>
